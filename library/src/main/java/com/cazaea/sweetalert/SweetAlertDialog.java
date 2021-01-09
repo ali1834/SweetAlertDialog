@@ -273,6 +273,11 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         }
         return this;
     }
+    
+    public SweetAlertDialog setContentSize (int size) {
+        mContentTextView.setTextSize(size);
+        return this;
+    }
 
     public SweetAlertDialog showCancelButton (boolean isShow) {
         mShowCancel = isShow;
