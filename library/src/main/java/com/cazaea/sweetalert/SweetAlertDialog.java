@@ -254,7 +254,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     
     public SweetAlertDialog setTitleSize (float size) {
         mTitleSize = size;
-        if (mTitleTextView != null && mTitleSize != null) {
+        if (mTitleTextView != null) {
             mTitleTextView.setTextSize(mTitleSize);
         }
         return this;   
@@ -288,7 +288,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     
     public SweetAlertDialog setContentSize (float size) {
         mContentSize = size;
-        if (mContentTextView != null && mContentSize != null) {
+        if (mContentTextView != null) {
             mContentTextView.setTextSize(size);
         }
         return this;
