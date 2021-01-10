@@ -249,7 +249,7 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     }
     
     public SweetAlertDialog setTitleSize (int size) {
-        mTitleText.setTextSize(size);
+        mTitleTextView.setTextSize(size);
         return this;
     }
 
