@@ -247,6 +247,11 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         }
         return this;
     }
+    
+    public SweetAlertDialog setTitleSize (int size) {
+        mTitleText.setTextSize(size);
+        return this;
+    }
 
     public SweetAlertDialog setCustomImage (Drawable drawable) {
         mCustomImgDrawable = drawable;
