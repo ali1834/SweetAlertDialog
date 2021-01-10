@@ -33,6 +33,8 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     private TextView mContentTextView;
     private String mTitleText;
     private String mContentText;
+    private int mTitleSize;
+    private int mContentSize;
     private boolean mShowCancel;
     private boolean mShowConfirm;
     private boolean mShowContent;
@@ -162,6 +164,8 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
         setCancelText(mCancelText);
         setConfirmText(mConfirmText);
         changeAlertType(mAlertType, true);
+        setContentSize(mContentSize);
+        setTitleSize(mTitleSize);
 
     }
 
@@ -249,8 +253,11 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     }
     
     public SweetAlertDialog setTitleSize (int size) {
-        mTitleTextView.setTextSize(size);
-        return this;
+        mTitleSize = size;
+        if (mTitleTextView != null && mTitleSize != null) {
+            mTitleTextView.setTextSize(mTitleSize);
+        }
+        return this;   
     }
 
     public SweetAlertDialog setCustomImage (Drawable drawable) {
@@ -280,7 +287,10 @@ public class SweetAlertDialog extends Dialog implements View.OnClickListener {
     }
     
     public SweetAlertDialog setContentSize (int size) {
-        mContentTextView.setTextSize(size);
+        mContentSize = size;
+        if (mContentTextView != null && mContentSize != null) {
+            mContentTextView.setTextSize(size);
+        }
         return this;
     }
 
